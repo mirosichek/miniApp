@@ -8,22 +8,52 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
             padding: 20px;
-            color: var(--tg-theme-text-color);
-            background-color: var(--tg-theme-bg-color);
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Telegram Mini App!</h1>
-    <p>This is a basic example of a Telegram Mini App.</p>
+
+    <h2>Введите значение:</h2>
+
+    <!-- Поле ввода -->
+    <input type="text" id="myInput" placeholder="Напишите что-нибудь...">
+
+    <!-- Кнопка -->
+    <button onclick="save()">Сохранить</button>
+
+    <!-- Тут будет вывод результата -->
+    <div id="result"></div>
+
     <script>
-        let tg = window.Telegram.WebApp;
-        tg.expand();
-        tg.MainButton.setText("Click Me!").show().onClick(function(){
-            tg.showAlert("You clicked the button!");
-        });
+        let savedValue = ""; // переменная для хранения данных
+
+        function save() {
+            savedValue = document.getElementById("myInput").value;
+
+            // вывод на экран
+            document.getElementById("result").innerText =
+                "Сохранённое значение: " + savedValue;
+
+            console.log("Сохранено:", savedValue);
+        }
     </script>
+
 </body>
 </html>
