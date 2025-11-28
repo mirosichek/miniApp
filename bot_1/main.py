@@ -1,8 +1,8 @@
 import asyncio
-from bot_app import BotApp
-from database import Database
+from bot_1.bot_app import BotApp
+from bot_1.database import Database
 import os
-import registrtion
+import bot_1.registrtion as registrtion
 
 TOKEN = os.environ.get("BOT_TOKEN") or "8425256609:AAGQAseZO2ZlhV04H-cSDou_hDQ8uVj7ObI"
 SUPABASE_URL = os.environ.get("SUPABASE_URL") or "https://zxdprwvrgzqpxyvxksud.supabase.co"

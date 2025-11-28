@@ -1,7 +1,7 @@
 import asyncio
 from aiogram import Bot, Dispatcher
-from registrtion import registration_router
-from Inline_kbs import quiz_ruoter
+from bot_1.registrtion import registration_router
+from bot_1.Inline_kbs import quiz_ruoter
 
 class BotApp:
     def __init__(self, token, db):

@@ -2,7 +2,7 @@ from aiogram import Router, types
 from aiogram.filters import Command
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
-from database import Database as db
+from bot_1.database import Database as db
 
 registration_router = Router()
 db = None
