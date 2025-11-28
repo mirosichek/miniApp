@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Telegram Mini App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: var(--tg-theme-text-color);
+            background-color: var(--tg-theme-bg-color);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Telegram Mini App!</h1>
+    <p>This is a basic example of a Telegram Mini App.</p>
+    <script>
+        let tg = window.Telegram.WebApp;
+        tg.expand();
+        tg.MainButton.setText("Click Me!").show().onClick(function(){
+            tg.showAlert("You clicked the button!");
+        });
+    </script>
+</body>
+</html>
